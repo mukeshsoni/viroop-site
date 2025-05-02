@@ -53,21 +53,4 @@ type Props = {
 const { classes } = Astro.props
 ---
 
-<Section padding="bottom" classes={classes}>
-	<Row>
-		<Col span="12" align="center">
-			<h2 class="!mb-6 text-base font-normal text-neutral-400 dark:text-neutral-600">
-				Trusted by <strong class="highlight">50,000+</strong> businesses
-			</h2></Col
-		>
-	</Row>
-	<Row flex classes="!flex-row">
-		{
-			images.map((item) => (
-				<Col>
-					<Image src={item.image} alt={item.alt} />
-				</Col>
-			))
-		}
-	</Row>
-</Section>
+<Section padding="bottom" classes={classes} />

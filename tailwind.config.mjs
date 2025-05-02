@@ -20,7 +20,8 @@ export default {
     },
     // Font weights
     {
-      pattern: /font-(thin|extralight|light|normal|medium|semibold|bold|extrabold|black)/,
+      pattern:
+        /font-(thin|extralight|light|normal|medium|semibold|bold|extrabold|black)/,
     },
     // Alignments
     {
@@ -37,7 +38,7 @@ export default {
           200: "#fbcfe8",
           300: "#f9a8d4",
           400: "#f472b6",
-          500: "#E2187D",
+          500: "#bb2b8e",
           600: "#db2777",
           700: "#be185d",
           800: "#9d174d",
@@ -71,10 +72,16 @@ export default {
           "100%": { transform: "translateY(0)", opacity: 1 },
         },
         fadeInShadowLight: {
-          "100%": { boxShadow: "0 20px 25px -5px rgba(15, 23, 42, .025), 0 8px 10px -6px rgba(15, 23, 42, .025);" },
+          "100%": {
+            boxShadow:
+              "0 20px 25px -5px rgba(15, 23, 42, .025), 0 8px 10px -6px rgba(15, 23, 42, .025);",
+          },
         },
         fadeInShadowDark: {
-          "100%": { boxShadow: "0 20px 25px -5px rgba(2, 6, 23, .25), 0 8px 10px -6px rgba(2, 6, 23, .25);" },
+          "100%": {
+            boxShadow:
+              "0 20px 25px -5px rgba(2, 6, 23, .25), 0 8px 10px -6px rgba(2, 6, 23, .25);",
+          },
         },
       },
       animation: {
