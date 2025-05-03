@@ -42,5 +42,12 @@ export const navigationBarData: NavData = {
 		{ name: 'FAQ', link: '/faq' },
 		{ name: 'Contact', link: '/contact' }
 	],
-	navActions: [{ name: 'Try it now', link: '/', style: 'primary', size: 'lg' }]
+	navActions: [
+		{
+			name: 'Try it now',
+			link: 'https://download.viroop.com/Viroop_0.1.0_aarch64.dmg',
+			style: 'primary',
+			size: 'lg'
+		}
+	]
 }
