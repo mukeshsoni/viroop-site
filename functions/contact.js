@@ -12,6 +12,7 @@ async function createAirtableRecord(env, body) {
     return result;
   } catch (error) {
     console.error("Error writing to airtable", error);
+    throw error;
   }
 }
 
@@ -44,11 +45,18 @@ async function submitHandler(request, env) {
 export async function onRequestPost({ request, env }) {
   const url = new URL(request.url);
   if (url.pathname === "/contact" || url.pathname === "/contact/") {
-    const response = await submitHandler(request, env);
-    return new Response(JSON.stringify({ status: "success" }), {
-      headers: { "Content-Type": "application/json" },
-      status: 200,
-    });
+    try {
+      const response = await submitHandler(request, env);
+      return new Response(JSON.stringify({ status: "success" }), {
+        headers: { "Content-Type": "application/json" },
+        status: 200,
+      });
+    } catch (e) {
+      return new Response(`Error trying to contact airtable: {e.message}`, {
+        status: 500,
+        headers: { "Content-Type": "application/json" },
+      });
+    }
   }
   return new Response("Not found", { status: 404 });
 }
