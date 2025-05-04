@@ -47,9 +47,9 @@ export async function onRequestPost({ request, env }) {
   if (url.pathname === "/contact" || url.pathname === "/contact/") {
     try {
       const response = await submitHandler(request, env);
-      return new Response(JSON.stringify({ status: "success" }), {
-        headers: { "Content-Type": "application/json" },
-        status: 200,
+      return new Response(null, {
+        headers: { Location: "/contact/success" },
+        status: 303,
       });
     } catch (e) {
       return new Response(`Error trying to contact airtable: {e.message}`, {
