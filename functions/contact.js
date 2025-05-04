@@ -45,7 +45,10 @@ export async function onRequestPost({ request, env }) {
   const url = new URL(request.url);
   if (url.pathname === "/contact" || url.pathname === "/contact/") {
     const response = await submitHandler(request, env);
-    return response;
+    return new Response(JSON.stringify({ status: "success" }), {
+      headers: { "Content-Type": "application/json" },
+      status: 200,
+    });
   }
   return new Response("Not found", { status: 404 });
 }
