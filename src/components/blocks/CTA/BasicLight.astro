@@ -11,6 +11,8 @@ import Col from '../../ui/Col.astro'
 // - UI
 import CTA from '../../ui/CTA.astro'
 import Button from '../../ui/Button.astro'
+// - Data
+import { configData } from '../../../config/config'
 ---
 
 <Section>
@@ -22,10 +24,7 @@ import Button from '../../ui/Button.astro'
 				text="Let's see if we can break free from big brother's monopoly"
 				classes="!shadow-none"
 			>
-				<Button
-					size="lg"
-					style="primary"
-					link="https://download.viroop.com/Viroop_0.1.0_aarch64.dmg"
+				<Button size="lg" style="primary" link={configData.downloadLink}
 					>Download Viroop for free now! (MacOS)
 				</Button>
 			</CTA>

@@ -11,6 +11,8 @@ import Col from '../../ui/Col.astro'
 // - UI
 import CTA from '../../ui/CTA.astro'
 import Button from '../../ui/Button.astro'
+// - Data
+import { configData } from '../../../config/config'
 
 // Content
 import ctaImage from '../../../assets/cta-dark-bg.webp'
@@ -26,10 +28,7 @@ import ctaImage from '../../../assets/cta-dark-bg.webp'
 				mode="dark"
 				bg={ctaImage}
 			>
-				<Button
-					size="lg"
-					style="primary"
-					link="https://download.viroop.com/Viroop_0.1.0_aarch64.dmg"
+				<Button size="lg" style="primary" link={configData.downloadLink}
 					>Download Viroop for free now! (MacOS)
 				</Button>
 			</CTA>

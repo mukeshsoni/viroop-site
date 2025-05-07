@@ -1,5 +1,7 @@
 // Navigation Bar
 // ------------
+// - Data
+import { configData } from './config'
 // Description: The navigation bar data for the website.
 export interface Logo {
 	src: string
@@ -45,7 +47,7 @@ export const navigationBarData: NavData = {
 	navActions: [
 		{
 			name: 'Try it now (MacOS only)',
-			link: 'https://download.viroop.com/Viroop_0.1.0_aarch64.dmg',
+			link: configData.downloadLink,
 			style: 'primary',
 			size: 'lg'
 		}
