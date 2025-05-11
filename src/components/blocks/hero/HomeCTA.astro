@@ -14,7 +14,8 @@ import Button from '../../ui/Button.astro'
 
 // Content
 // - Hero Image
-import heroImage from '../../../assets/viroop-conversational-search-demo.gif'
+import heroImage from '../../../assets/hero-01.png'
+import heroGif from '../../../assets/viroop-conversational-search-demo-2.gif'
 // - Data
 import { configData } from '../../../config/config'
 ---
@@ -38,11 +39,11 @@ import { configData } from '../../../config/config'
 		<Col span="2" />
 		<Col span="8">
 			<Image
-				src={heroImage}
+				src={heroGif}
 				alt="Viroop. Photo manager and editor."
 				class="translate-y-8 shadow-2xl shadow-neutral-200 dark:shadow-neutral-950"
-			/></Col
-		>
+			/>
+		</Col>
 		<Col span="2" />
 	</Row>
 </Section>
