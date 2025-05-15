@@ -25,7 +25,7 @@ export const configData: Config = {
 	siteTitle: 'Viroop. Photo manager and editor.',
 	siteDescription:
 		'Viroop is a lightweight alternative for something like Lightroom. It wants to combine a photo manager and a photo editor into a single app.',
-	downloadLink: 'https://download.viroop.com/Viroop_0.2.3_aarch64.dmg',
+	downloadLink: 'https://download.viroop.com/Viroop_0.2.32_aarch64.dmg',
 	ogImage: '/og.jpg',
 	logo: {
 		src: '/logo.svg',
